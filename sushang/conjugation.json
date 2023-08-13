@@ -1,0 +1,62 @@
+{
+	"definite": {
+		"back": {
+			"voweled": {
+				"finite": {
+					"simple": ["jom","jod","ja","jnu","jtok","juk"],
+					"perfect": ["tom","tod","ta","tonu","totok","tuk"],
+					"imperative": ["","dora","","doronu","dorodok",""]
+				},
+				"participle": ["gor","łmi","vor","vti"]
+			},
+			"vowelLess": {
+				"finite": {
+					"simple": ["om","od","ja","nu","tok","juk"],
+					"perfect": ["tom","tod","ta","tonu","totok","tuk"],
+					"imperative": ["","dora","","doronu","dorodok",""]
+				},
+				"participle": ["ugor","ałmi","avor","avti"]
+			}
+		},
+		"front": {
+			"voweled": {
+				"finite": {
+					"simple": ["jem","jed","je","jnu","jtek","juk"],
+					"perfect": ["tem","ted","te","tenu","titek","tuk"],
+					"imperative": ["","dera","","derenu","deredek",""]
+				},
+				"participle": ["gor","łmi","vor","vti"]
+			},
+			"vowelLess": {
+				"finite": {
+					"simple": ["jem","jed","je","nu","tek","juk"],
+					"perfect": ["tem","ted","te","tenu","titek","tuk"],
+					"imperative": ["","dera","","derenu","deredek",""]
+				},
+				"participle": ["igor","ełmi","evor","evti"]
+			}
+		}
+	},
+	"indefinite": {
+		"voweled": {
+			"finite": {
+				"simple": ["ju","jš","j","me","te","ch"],
+				"perfect": ["tu","tiš","ti","time","tite","tech"],
+				"imperative": ["","ddina","","ddinu","ddene",""]
+			},
+			"participle": ["igor","ełmi","evor","evti"]
+		},
+		"vowelLess": {
+			"finite": {
+				"simple": ["u","iš","i","me","te","ech"],
+				"perfect": ["tu","tiš","ti","time","tite","tech"],
+				"imperative": ["","dina","","dinu","dene",""]
+			},
+			"participle": ["igor","ełmi","evor","evti"]
+		}
+	},
+	"pronouns": {
+		"finite": ["mi","ti","on","biz","tiz","onk"],
+		"imperative": ["","ti","","biz","tiz",""]
+	}
+}

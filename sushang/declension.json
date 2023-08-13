@@ -1,0 +1,79 @@
+{
+	"endings": {
+		"voweled": {
+			"back": {
+				"cases": {
+					"singular": ["","t","n","nak","kar","ni","ve","no","le","to"],
+					"plural": ["","","nim","nakim","karim","","","","",""]
+				},
+				"posession": {
+					"singular": ["m","d","j","nu","tok","yuk"],
+					"dual": ["laram","larad","larya","laranu","lartok","laryuk"],
+					"plural": ["im","id","ij","inu","itok","iyuk"]
+				}
+			},
+			"front": {
+				"cases": {
+					"singular": ["","t","n","nek","ker","ni","ve","no","le","to"],
+					"plural": ["","","nim","nekim","kerim","","","","",""]
+				},
+				"posession": {
+					"singular": ["m","d","j","nu","tek","yuk"],
+					"dual": ["lerem","lered","lerye","lerenu","lertek","leryuk"],
+					"plural": ["im","id","ij","inu","itek","iyuk"]
+				}
+			}
+		},
+		"vowelLess": {
+			"back": {
+				"cases": {
+					"singular": ["","ot","en","nak","kar","ni","ve","no","le","to"],
+					"plural": ["","","enim","nakim","karim","","","","",""]
+				},
+				"posession": {
+					"singular": ["om","od","ya","onu","otok","yuk"],
+					"dual": ["laram","larad","larya","laranu","lartok","laryuk"],
+					"plural": ["oim","oid","oiya","oinu","oitok","oiyuk"]
+				}
+			},
+			"front": {
+				"cases": {
+					"singular": ["","et","en","nek","ker","ni","ve","no","le","to"],
+					"plural": ["","","enim","nekim","kerim","","","","",""]
+				},
+				"posession": {
+					"singular": ["em","ed","ye","enu","itek","yuk"],
+					"dual": ["lerem","lered","lerye","lerenu","lertek","leryuk"],
+					"plural": ["eim","eid","eiye","einu","eitek","eiyuk"]
+				}
+			}
+		}
+	},
+	"dual": {
+		"back": "lar", 
+		"front": "ler"
+	},
+	"plural": {
+		"patternList": [
+			["um", "a"],
+			["ra", "ri"],
+			["a", "ara"],
+			["e", "era"],
+			["i", "im"],
+			["o", "ora"],
+			["u", "ura"],
+			["", "im"]
+		]
+	},
+	"naming": {
+		"cases": {
+			"abbr": ["nom.","acc.","gen.","dat.","abl.","loc.","instr.","part.","abe.","comit."],
+			"ext": ["nominative","accusative","genitive","dative","ablative","locative","instrumental","partitive","abessive","comitative"]
+		},
+		"pronouns": ["mi","ti","on","biz","tiz","onim"]
+	},
+	"special": {
+		"exclusions": ["nak","nek","kar","ker","ni"],
+		"exclusions2": ["nakom","nakod","nakya","nakanu","nakotok","nakyuk","nekem","neked","nekye","nekenu","nekitek","nekyuk","karom","karod","karya","karanu","karotok","karyuk","kerem","kered","kerye","kerenu","keritek","keryuk","nim","nid","niy","ninu","nitek","niyuk"]
+	}
+}
