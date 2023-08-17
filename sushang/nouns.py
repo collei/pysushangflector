@@ -1,3 +1,6 @@
+'''
+' nouns
+'''
 import json
 import os
 
@@ -163,49 +166,3 @@ class Noun(NounInfo):
 		return self.__table
 	##
 	##
-
-
-def declensionToHtml(table, panel_id=None):
-	if not hasattr(declensionToHtml, "counter"):
-		declensionToHtml.counter = 0
-	if not panel_id:
-		declensionToHtml.counter += 1
-		panel_id = 'tabledecl{0}'.format(declensionToHtml.counter)
-	#
-	rows = []
-	indexes_decl = ("nom.", "acc.", "gen.", "dat.", "abl.", "loc.", "instr.", "part.", "abess.", "comit.")
-	indexes_poss = ("mi", "ti", "on", "biz", "tiz", "onk")
-	#
-	rows.append('<div id="{0}">'.format(panel_id))
-	rows.append('<div style="width: 700px !important;">')
-	rows.append('<table border="1" cellpadding="3" width="100%" style="border-collapse:collapse;">')
-	rows.append('<tr><th>{0}</th><th>{1}</th><th>{2}</th><th>{3}</th></tr>'.format('Case','Singular','Dual','Plural'))
-	for idx, cas in enumerate(indexes_decl):
-		row_html = '<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td></tr>'.format(
-			cas,
-			table["cases"]["singular"][idx],
-			table["cases"]["dual"][idx],
-			table["cases"]["plural"][idx]
-		)
-		rows.append(row_html)
-	rows.append('</table>')
-	#
-	rows.append('</div>')
-	rows.append('<br>')
-	rows.append('<div style="width: 700px !important;">')
-	rows.append('<table border="1" cellpadding="3" width="100%" style="border-collapse:collapse;">')
-	rows.append('<tr><th>{0}</th><th>{1}</th><th>{2}</th><th>{3}</th></tr>'.format('Person','Singular','Dual','Plural'))
-	for idx, cas in enumerate(indexes_poss):
-		row_html = '<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td></tr>'.format(
-			cas,
-			table["posession"]["singular"][idx],
-			table["posession"]["dual"][idx],
-			table["posession"]["plural"][idx]
-		)
-		rows.append(row_html)
-	rows.append('</table>')
-	rows.append('</div>')
-	rows.append('</div>')
-	#
-	return '\n'.join(rows)
-

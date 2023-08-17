@@ -1,3 +1,6 @@
+'''
+' verbs
+'''
 import json
 import os
 
@@ -135,51 +138,3 @@ class Verb(VerbInfo):
 		return self.__table
 	##
 	##
-	
-
-def conjugationToHtml(table, panel_id=None):
-	if not hasattr(conjugationToHtml, "counter"):
-		conjugationToHtml.counter = 0
-	if not panel_id:
-		conjugationToHtml.counter += 1
-		panel_id = 'tableconj{0}'.format(conjugationToHtml.counter)
-	#
-	rows = []
-	indexes = (0, 1, 2, 3, 4, 5)
-	indexes_cond = (0, 1, 2, 3)
-	#
-	rows.append('<div id="{0}">'.format(panel_id))
-	rows.append('<div style="width: 700px !important;">')
-	rows.append('<table border="1" cellpadding="3" width="100%" style="border-collapse:collapse;">')
-	rows.append('<tr><th colspan="2">{0}</th><th colspan="2">{1}</th><th colspan="2">{2}</th></tr>'.format('No-past','Past','Imperative'))
-	rows.append('<tr><th>{0}</th><th>{1}</th><th>{0}</th><th>{1}</th><th>{0}</th><th>{1}</th></tr>'.format('Indefinite','Definite'))
-	for idx in indexes:
-		row_html = '<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td>{5}</td></tr>'.format(
-			table["nopast"]["indefinite"][idx],
-			table["nopast"]["definite"][idx],
-			table["past"]["indefinite"][idx],
-			table["past"]["definite"][idx],
-			table["imperative"]["indefinite"][idx],
-			table["imperative"]["definite"][idx]
-		)
-		rows.append(row_html)
-	rows.append('</table>')
-	#
-	rows.append('</div>')
-	rows.append('<br>')
-	rows.append('<div style="width: 700px !important;">')
-	rows.append('<table border="1" cellpadding="3" width="100%" style="border-collapse:collapse;">')
-	rows.append('<tr><th colspan="2">{0}</th><th colspan="2">{1}</th></tr>'.format('Imperfect','Perfect'))
-	rows.append('<tr><th>{0}</th><th>{1}</th><th>{0}</th><th>{1}</th></tr>'.format('Active','Passive'))
-	rows.append('<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td></tr>'.format(
-		table["conditional"][0],
-		table["conditional"][1],
-		table["conditional"][2],
-		table["conditional"][3]
-	))
-	rows.append('</table>')
-	rows.append('</div>')
-	rows.append('</div>')
-	#
-	return '\n'.join(rows)
-
