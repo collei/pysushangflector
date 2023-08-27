@@ -1,3 +1,4 @@
 *.html
+*.txt
 win.cmd
 __pycache__
