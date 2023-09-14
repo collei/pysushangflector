@@ -66,7 +66,6 @@ class VerbInfo:
 class Verb(VerbInfo):
 	def __init__(self,verb):
 		super().__init__(verb)
-		self.__table = None
 	##
 	def __makeVoice(self,verbForm,voice):
 		t_voweled = ""
@@ -92,9 +91,6 @@ class Verb(VerbInfo):
 		return verbForm + t_consonanted
 	##
 	def getConjugationTable(self,voice="active"):
-		if (self.__table != None):
-			return self.__table
-		#
 		stem = self.getStem().lower()
 		table = { "nopast": { "indefinite": [], "definite": [] }, "past": { "indefinite": [], "definite": [] }, "imperative": { "indefinite": [], "definite": [] }, "conditional": [] };
 		guide = { "finite" : { "indefinite": None, "definite": None }, "participle": None }
@@ -134,7 +130,6 @@ class Verb(VerbInfo):
 		for idx, participle in enumerate(guide["participle"]):
 			table["conditional"].append(stem + participle)
 		#
-		self.__table = table
-		return self.__table
+		return table
 	##
 	##
