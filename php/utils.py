@@ -28,7 +28,7 @@ def diacritics_to_entities(text,verbatim=False):
 
 diacritics_to_entities.__ENTITIES_VERBATIM = {
 	"\"": ("&#34;", "&quot;", "quotation mark"),
-	"'": ("&#39;", "&apos; (does not work in IE)", "apostrophe "),
+	"'": ("&#39;", "&apos;", "apostrophe "),
 	"&": ("&#38;", "&amp;", "ampersand"),
 	"<": ("&#60;", "&lt;", "less-than"),
 	">": ("&#62;", "&gt;", "greater-than"),
